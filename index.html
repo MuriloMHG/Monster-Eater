@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monster Eater</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <canvas id="game" aria-label="Monster Eater"></canvas>
+
+      <section class="hud hud-left" aria-label="Tempo e pontos">
+        <div class="timer" id="timer">02:00</div>
+        <div class="score-row">
+          <span>Pontos</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="score-row">
+          <span>Forca</span>
+          <strong id="power">1.0</strong>
+        </div>
+      </section>
+
+      <section class="boss-panel" id="bossPanel" aria-label="Vida do chefe">
+        <div class="boss-name">Chefe final</div>
+        <div class="boss-bar">
+          <span id="bossFill"></span>
+        </div>
+      </section>
+
+      <section class="hud hud-right" aria-label="Status do jogador">
+        <div class="status-line">
+          <span>Vida</span>
+          <div class="meter"><span id="healthFill"></span></div>
+        </div>
+        <div class="status-line">
+          <span>Energia</span>
+          <div class="meter"><span id="energyFill"></span></div>
+        </div>
+        <div class="status-line">
+          <span>Nitro</span>
+          <div class="meter"><span id="nitroFill"></span></div>
+        </div>
+      </section>
+
+      <section class="toast" id="toast">
+        <h1 id="toastTitle">Monster Eater</h1>
+        <p id="toastText">Coma o maximo que puder antes do chefe aparecer.</p>
+        <button id="restartButton" type="button">Reiniciar</button>
+      </section>
+    </main>
+
+    <script src="game.js" defer></script>
+  </body>
+</html>
